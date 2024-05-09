@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій сайт - Контакти</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .thumbnails img {
+            width: 50px;
+            height: auto;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        #main-image {
+            width: 300px;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer; /* Додано курсор pointer */
+        }
+
+        #main-image:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainImage = document.getElementById('main-image');
+            const thumbnails = document.querySelectorAll('.thumbnails img');
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('mouseover', () => {
+                    mainImage.src = thumbnail.src;
+                    mainImage.alt = thumbnail.alt;
+                });
+            });
+
+            // Додано обробник подій для великого зображення
+            mainImage.addEventListener('click', function() {
+                window.location.href = 'dunk_gray.html'; // Перенаправлення на dunk_gray.html
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Данки Nike</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Контакти</h2>
+            <p>Ціна: $115</p>
+            <div class="shoe-gallery">
+                <!-- Додано атрибут id та event listener -->
+                <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/45f2395d-6cb3-4232-8860-7668d6fb9c62/dunk-low-retro-mens-shoes-76KnBL.png" alt="Данки Nike" id="main-image">
+                <div class="thumbnails">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e27b49b3-1ad5-4d38-8193-d57fe3222db1/dunk-low-retro-mens-shoes-76KnBL.png" alt="Данки Nike">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9c00a602-ee6f-4b2e-aae7-15b49b3ebe92/dunk-low-retro-mens-shoes-76KnBL.png" alt="Данки Nike">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6969944c-c00b-4a59-83e8-7a5e2bb80f12/dunk-low-retro-mens-shoes-76KnBL.png" alt="Данки Nike">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0dc8ed4e-799d-4466-b31c-3d45a14496de/dunk-low-retro-mens-shoes-76KnBL.png" alt="Данки Nike">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Мій сайт. Усі права захищені.</p>
+    </footer>
+</body>
+</html>

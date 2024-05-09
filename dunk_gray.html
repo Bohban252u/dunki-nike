@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Данки Nike - Сірий колір</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .thumbnails img {
+            width: 50px;
+            height: auto;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        #main-image {
+            width: 300px;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #main-image:hover {
+            transform: scale(1.1);
+        }
+
+        .product-details {
+            float: right;
+            margin-left: 20px;
+            width: calc(100% - 350px); /* різниця між шириною сторінки та великим фото */
+        }
+
+        .product-description {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainImage = document.getElementById('main-image');
+            const thumbnails = document.querySelectorAll('.thumbnails img');
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('mouseover', () => {
+                    mainImage.src = thumbnail.src;
+                    mainImage.alt = thumbnail.alt;
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Данки Nike - Сірий колір</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Данки Nike - Сірий колір</h2>
+            <div class="shoe-gallery">
+                <div class="thumbnails">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/45f2395d-6cb3-4232-8860-7668d6fb9c62/dunk-low-retro-mens-shoes-76KnBL.png" alt="Данки Nike - Сірий колір">
+                
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3c89a1c2-3a95-4d70-9cc7-dd45b2bcdf49/dunk-low-retro-mens-shoes-76KnBL.png" alt="Данки Nike - Сірий колір">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/4f2fd75c-10f4-4249-a4f7-b38d57646f8f/dunk-low-retro-mens-shoes-76KnBL.png" alt="Данки Nike - Сірий колір">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/4ea08d04-7eee-4d62-8a95-39f85f7be223/dunk-low-retro-mens-shoes-76KnBL.png" alt="Данки Nike - Сірий колір">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a60c0e51-7cc7-40f9-9860-942f809dfff3/dunk-low-retro-mens-shoes-76KnBL.png" alt="Данки Nike - Сірий колір">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a788613c-1644-4c84-a090-66c79bb9abf3/dunk-low-retro-mens-shoes-76KnBL.png" alt="Данки Nike - Сірий колір">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/31f932e1-4317-42e4-b23f-40a1f452cdf1/dunk-low-retro-mens-shoes-76KnBL.png" alt="Данки Nike - Сірий колір">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/41370008-cd2c-4ec1-83a6-9987b14fe0d3/dunk-low-retro-mens-shoes-76KnBL.png" alt="Данки Nike - Сірий колір">
+                </div>
+                <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/45f2395d-6cb3-4232-8860-7668d6fb9c62/dunk-low-retro-mens-shoes-76KnBL.png" alt="Данки Nike - Сірий колір" id="main-image">
+                <div class="product-details">
+                    <h3>Ціна: $115</h3>
+                    <p class="product-description">Created for the hardwood but taken to the streets, the basketball icon returns with classic details and throwback hoops flair. Channeling '80s vibes, its padded, low-cut collar lets you take your game anywhere—in comfort.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Мій сайт. Усі права захищені.</p>
+    </footer>
+</body>
+</html>
